@@ -1,0 +1,407 @@
+@font-face {
+    font-family: 'FingerPaintFont';
+    src: url('FingerPaint-Regular.ttf');
+  }
+
+body {
+    font-family: 'FingerPaintFont', 'Roboto', 'sans-serif';
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1, h2, h3 {
+    text-align: center;
+    color: #333;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* navbar */
+.navbar {
+    background-color: #008CBA;
+    padding: 10px 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    background-color: #008CBA;
+    margin-top: 0px;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    line-height: 70px;
+    z-index: 1000; /* this is a overlapping, so it allows navbar to overlap hovering elements*/
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* navbar link states */
+.navbar a:link, .navbar a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar a:hover { 
+    text-decoration: underline;
+    color: #FFD700; 
+}
+
+.navbar a:active { 
+    color: #005f7a;
+}
+
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ADD8E6;
+}
+
+
+
+.hero-buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #008CBA;
+    color: white;
+    cursor: pointer;
+}
+
+.hero-buttons button:hover {
+    background-color: #005f7a;
+}
+
+/* card stuff so it looks better when text is displayed on it*/
+.card-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.card-section h2{
+    font-size: 2rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+    max-width: 40%;
+    border-radius: 8px;
+}
+
+.card p {
+    max-width: 50%;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+/* grid section on impact part of index.html */
+.grid-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+
+    gap: 20px;
+}
+.grid-section h2{
+    font-size: 2rem;
+}
+
+/* modifies the additional info section on index.html */
+.additional-info-section {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.additional-info-section h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* layout*/
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.grid-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grid-item h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.grid-item p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.grid-item a {
+    text-decoration: none;
+    color: #008CBA;
+}
+
+.grid-item a:visited, .grid-item a:link  {
+    color: #64858e;
+}
+
+.grid-item a:hover {
+    color: #005f7a;
+}
+
+.grid-item a:active {
+    color: #385962;
+}
+
+.grid-item:hover {
+    position: relative;
+    top: -10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+}
+
+/* footer stuff */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+main {
+    flex: 1; /* literally here for the sole purpose of making the footer stick at the very bottom*/
+}
+
+.footer {
+    background-color: #008CBA; 
+    color: white;
+    text-align: center;
+    padding: 20px 40px; 
+    position: sticky;
+    bottom: 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/*footer links */
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px; /*space out the links*/
+    font-size: 16px; 
+}
+
+
+.footer a:visited, .footer a:link{
+    background-color: #473abb;
+}
+
+.footer a:hover {
+    color: #FFD700; 
+    text-decoration: underline;
+    background-color: #005f7a; 
+    padding: 5px 10px; 
+    border-radius: 3px; 
+}
+
+.footer a:active{
+    color:#008CBA;
+}
+
+/* footer buttons and effects*/
+.button {
+    background-color: #005f7a; 
+    color: white;
+    padding: 12px 25px;
+    margin: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.button:visited, .button:link{
+    background-color: #473abb;
+}
+
+.button:hover {
+    background-color: #7a6fdb; 
+}
+
+.button:active {
+    background-color: #5046a4; 
+}
+
+
+/*page1.html stuff*/
+
+.color-change p {
+    color: #555; 
+    margin: 30px;
+}
+
+.wrapper {
+    text-align: center; 
+    margin: 20px; 
+}
+
+.wrapper img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto; 
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+
+    .color-change p {
+        color: black; 
+    }
+
+    .hero{
+        background-color: #7e4fd0;
+       
+    }
+    .hero p{
+        color:black;
+    }
+
+    .grid-section{
+        background-color: #7e4fd0;
+    }
+
+    .grid-item h3{
+        color: #005f7a;
+    }
+
+    .additional-info-section{
+        background-color: #7e4fd0;
+    }
+    body {
+        background-color: #6b46ab;
+        color: #e0e0e0;
+    }
+
+.navbar ul{
+    background-color: #333;
+}
+    .card {
+        background-color: #1e1e1e;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .grid-item {
+        background-color: #1e1e1e;
+        border: 1px solid #333;
+        color: #e0e0e0;
+    }
+
+    .footer {
+        background-color: #333;
+        color: #e0e0e0;
+    }
+
+    a {
+        color: #80cbc4;
+    }
+
+    a:hover {
+        color: #4db6ac;
+    }
+}
+
+
+
+/*mobile/small screen compatibility, gives 1 column layout*/
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    .card {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .card img {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .grid, .grid-container {
+        grid-template-columns: 1fr; 
+        gap: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
