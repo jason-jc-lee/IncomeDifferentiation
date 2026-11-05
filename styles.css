@@ -10,6 +10,12 @@ body {
     padding: 0;
 }
 
+.hero .hero-message {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: black;
+}
+
 
 h1, h2, h3 {
     text-align: center;
