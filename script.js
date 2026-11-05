@@ -31,7 +31,7 @@ const heroMessage = document.createElement('p');
 
 // paragraph properties
 heroMessage.classList.add('hero-message');
-heroMessage.style.cssText = 'font-size: 1.2rem; margin-top: 20px; color: #005f7a;';
+heroMessage.style.cssText = 'font-size: 1.2rem; margin-top: 20px; color: black;';
 
 // day messages
 function getDayMessage() {
